@@ -23,16 +23,15 @@ public class Main {
 
             try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path))) {
                 for (Product product : products) {
-                    Double totalValue = product.getPrice() * product.getQuantity();
-                    line = product.getName() + ", " + String.format("%.2f", totalValue);
+                    line = product.getName() + ", " + String.format("%.2f", product.totalValue());
                     bufferedWriter.write(line);
                     bufferedWriter.newLine();
                 }
             } catch (IOException e) {
-                System.out.println(e.getMessage());
+                System.out.println("Error: " + e.getMessage());
             }
         } catch (IOException e) {
-            System.out.println("S");
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }

@@ -11,18 +11,11 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public Product() {
-    }
-
     public String getName() {
         return name;
     }
 
-    public Double getPrice() {
-        return price;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
+    public Double totalValue() {
+        return price*quantity;
     }
 }
