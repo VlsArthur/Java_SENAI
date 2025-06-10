@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+<body  class="bg-gray-100 min-h-screen">
+    <nav class="navbar bg-body-tertiary" data-bs-theme="dark" style="padding: 1%;">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1" style="margin-left: 10%; font-size: 200%;"><strong>Meu Site</strong></span>
+            <span class="navbar-text" style="margin-right: 10%; font-size: 200%;">Cadastro</span>
+        </div>
+    </nav>
+
+    <div class="container mx-auto mt-8 p-4" style="padding: 2%;">
+        <form class="bg-white shadow-md rounded p-4" onsubmit="cadastrar(event)">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="email@exemplo.com" required>
+            </div>
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" placeholder="Senha" required>
+            </div>
+            <div class="mb-3">
+                <label for="cep" class="form-label">CEP</label>
+                <input type="text" maxlength="8" pattern="[0-9]*" inputmode="numeric" class="form-control" id="cep" onblur="pesquisacep(this.value);" placeholder="00000000" required>
+            </div>
+            <div class="mb-3">
+                <label for="logradouro" class="form-label">Logradouro</label>
+                <input type="text" class="form-control" id="logradouro" placeholder="Logradouro" required>
+            </div>
+            <div class="mb-3">
+                <label for="numero" class="form-label">Número</label>
+                <input type="text" pattern="[0-9]*" class="form-control" id="numero" placeholder="Número" required>
+            </div>
+            <div class="mb-3">
+                <label for="complemento" class="form-label">Complemento</label>
+                <input type="text" class="form-control" id="complemento" placeholder="Complemento" required>
+            </div>
+            <div class="mb-3">
+                <label for="bairro" class="form-label">Bairro</label>
+                <input type="text" class="form-control" id="bairro" placeholder="Bairro" required>
+            </div>
+            <div class="mb-3">
+                <label for="cidade" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="cidade" placeholder="Cidade" required>
+            </div>
+            <div class="mb-3">
+                <label for="estado" class="form-label">Estado/UF</label>
+                <input type="text" class="form-control" id="estado" placeholder="Estado" required>
+            </div>
+            <button type="submit" class="btn btn-primary">OK</button>
+            <a href="http://localhost:5500/Ativ_EAD_Consumo_Interface/login.html">Já tenho login</a>
+        </form>
+    </div>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="./static/js/script.js"></script>
+</body>
+</html>
