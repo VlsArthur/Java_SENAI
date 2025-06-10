@@ -36,7 +36,7 @@ function cadastrar(event) {
         document.getElementById('cidade').value = "";
         document.getElementById('estado').value = "";
         
-        fetch ('http://localhost:8080/api/usuarios', {
+        fetch ('http://localhost:8080/api/funcionarios', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({"nome":nome,

@@ -11,11 +11,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="usuarios")
+@Table(name="funcionarios")
 @Getter
 @Setter
 @NoArgsConstructor
-public class UsuarioModel {
+public class FuncionarioModel {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
