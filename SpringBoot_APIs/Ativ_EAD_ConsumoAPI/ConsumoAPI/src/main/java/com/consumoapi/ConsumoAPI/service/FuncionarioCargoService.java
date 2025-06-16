@@ -14,7 +14,9 @@ public class FuncionarioCargoService {
     @Autowired
     private FuncionarioCargoRepository funcionarioCargoRepository;
 
-    public List<FuncionarioCargoModel> listarTodos() {
+    public List<FuncionarioCargoModel> listarTodos(Long funcionarioId, Long cargoId) {
+        if (funcionarioId != null) return funcionarioCargoRepository.findByFuncionarioId(funcionarioId);
+        if (cargoId != null) return funcionarioCargoRepository.findByFuncionarioId(cargoId);
         return funcionarioCargoRepository.findAll();
     }
 

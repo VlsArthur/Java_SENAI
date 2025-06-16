@@ -31,10 +31,10 @@ public class FuncionarioCargoModel {
     @JoinColumn(name = "cargo_id", nullable = false)
     private CargoModel cargo;
 
-    @Column
+    @Column(length = 1000)
     private String detalhes;
 
-    @Column
+    @Column(nullable = false)
     private java.time.LocalDate data_inicio;
 
     @PrePersist
